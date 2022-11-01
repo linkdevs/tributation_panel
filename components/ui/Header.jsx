@@ -11,7 +11,7 @@ export default function Header({ title, hide, className, loggedIn, ...props }) {
         {!hide && <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
                 <div className="navbar-brand d-flex align-items-center">
-                    <span className='fw-bold ps-2'>TRIBUTO FÁCIL</span>
+                    <span className='fw-bold ps-2'>LINK TRIBUTOS</span>
                 </div>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                     <span className="navbar-toggler-icon"></span>
