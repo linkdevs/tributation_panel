@@ -17,6 +17,9 @@ class MyDocument extends Document {
                     <link href="/plugins/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
                     <link href="/plugins/fontawesome/css/duotone.min.css" rel="stylesheet" />
                     <link href="/plugins/fontawesome/css/brands.min.css" rel="stylesheet" />
+                    <link href="/plugins/material-colors/material-colors.min.css" rel="stylesheet" />
+
+
 
                     <link href={`/plugins/bootstrap/bootstrap.min.css`} rel="stylesheet" />
                     <script src={`/plugins/bootstrap/bootstrap.bundle.min.js`}></script>

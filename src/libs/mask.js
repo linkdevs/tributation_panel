@@ -110,6 +110,8 @@ export default function Masked(value) {
         return mask(pattern, true);
     }
 
+
+
     return {
         mask,
         ...formats

@@ -1,6 +1,7 @@
 import md5 from "locutus/php/strings/md5";
 import Cities from "./cities";
 
+
 export const isJson = (string) => {
     try {
         if (typeof string === "string") JSON.parse(string);
@@ -10,6 +11,44 @@ export const isJson = (string) => {
         return false;
     }
 }
+
+export function handleResponseError(error) {
+
+    if (typeof error === "string") return error;
+
+    if (error.response) {
+        if (error.response.data) {
+            if (error.response.data.error) return error.response.data.error;
+            else if (error.response.data.message) return error.response.data.message;
+            else if (error.response.data.errors) {
+                let message = "";
+                for (let key in error.response.data.errors) {
+                    message += `${error.response.data.errors[key]}\n`;
+                }
+                return message;
+            }
+        }
+    }
+
+    return "Erro desconhecido";
+}
+
+export function priceMask(number) {
+    if (typeof number !== "float") number = parseFloat(number);
+    return number.toFixed(2).replaceAll(".", ",");
+}
+
+export function dateTimeMask(date) {
+    if (date) date = date.toString();
+    else return null;
+
+    const [dateOnly, timeOnly] = date.split("T");
+
+    date = dateOnly.split("-").reverse().join("/");
+
+    return date;
+}
+
 
 export const lf = {
     getItem(key) {
